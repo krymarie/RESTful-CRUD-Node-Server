@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-express",
+  "version": "1.0.0",
+  "description": "http server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krymarie/NodeJS-Express.git"
+  },
+  "author": "Krymarie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krymarie/NodeJS-Express/issues"
+  },
+  "homepage": "https://github.com/krymarie/NodeJS-Express#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
