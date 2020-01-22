@@ -1,4 +1,5 @@
 const app = require("./app");
+//update this port
 var port = 8888;
 
 //spin up our app
