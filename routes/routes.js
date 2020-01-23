@@ -1,6 +1,14 @@
 var appRouter = function(app) {
 
+    // default route
+    appRouter.get('/', (req, res, next) => {
+        // res.send(obj)
+        // returns HTML with message welcoming user to page
+        res.send('<h1>Welcome To This Page Of Nothingness Enjoy!</h1>')
+    })
+
     app.get("/api", function(req, res) {
+        //three key value pairs
         var files = {
             "somthin": "yatayata",
             "something": "thing1and2",
@@ -10,6 +18,7 @@ var appRouter = function(app) {
     });
 
     app.get("/api/data", function(req, res) {
+        //more key value pairs
         var user  = {
                 data: {
                     "username": "data",
@@ -27,13 +36,10 @@ var appRouter = function(app) {
         return res.send(data);
     });
 
-
-    var server = app.listen(3000, function () {
+    // listen on port 5000
+    var server = app.listen(5000, function () {
         console.log("Listening on port %s...", server.address().port);
     });
 
-
-    //* MOVED TO ROUTES THEN MOVED BACK *//
-    //export app for the tests
     module.exports = app;
-}.
+}

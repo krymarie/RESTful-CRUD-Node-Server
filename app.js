@@ -1,6 +1,16 @@
-var express = require('express');
-var app = express();// sets up the db
-var bodyParser = require('body-parser');
+// var express = require('express');
+import express from 'express';
+
+// var bodyParser = require('body-parser');
+import bodyParser from 'body-parser';
+
+import { router } from '/.routes/test.route';
+//var routes = require("./routes/routes.js")(app);
+
+
+// var app = express();// sets up the db
+const app = express()
+
 
 // another way
 // app.use(express.urlencoded());
@@ -18,17 +28,21 @@ var bodyParser = require('body-parser');
 // yet another  way
 // app.use(express.bodyParser());
 
-// CLASS WAY
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+// LANDON CLASS WAY
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extended: true}));
 
-// write the API here
+// *** TONIGHT *** notes from class
+app.use(express.static('public'));
 
-// * MOVED TO ROUTES  
-// * JUST KIDDING MOVED BACK * //
-// *ONLY BECAUSE TEST IS CHECKING ROUTES IN APP.JS * //
-//var routes = require("./routes/routes.js")(app);
 
+// router.get('/')
+//not sure what i was trying to do here???
+// router
+// res.send(object);
+
+
+//* TODO: MOVED ROUTES TO ROUTES  *//
 
 // all new to me so baby steps
 app.get("/api", function(req, res) {
@@ -68,11 +82,10 @@ app.post("/api/data", (req, res)  => {
 });
 
 
-var server = app.listen(3000, function () {
+var server = app.listen(5000, function () {
     console.log("Listening on port %s...", server.address().port);
 });
 
 
-//* MOVED TO ROUTES THEN MOVED BACK FOR TEST ONLY *//
-//export app for the tests
+//* TODO: MOVE TO ROUTES *//
 module.exports = app;
