@@ -2,7 +2,6 @@ var appRouter = function(app) {
 
     // default route
     appRouter.get('/', (req, res, next) => {
-        // res.send(obj)
         // returns HTML with message welcoming user to page
         res.send('<h1>Welcome To This Page Of Nothingness Enjoy!</h1>')
     })
@@ -15,25 +14,6 @@ var appRouter = function(app) {
             "someone": "johndoe"
         }
         res.send(files);
-    });
-
-    app.get("/api/data", function(req, res) {
-        //more key value pairs
-        var user  = {
-                data: {
-                    "username": "data",
-                    "password": "1234",
-                    "handel": "_krymitch"
-                },
-                message: "success",
-                date: "+1week"
-            }
-            return res.send(user);
-    });
-
-    app.post("/api/data", (req, res)  => {
-        var data = req.body
-        return res.send(data);
     });
 
     // listen on port 5000
