@@ -2,7 +2,13 @@
 
 URL [http://localhost:3000](http://localhost:3000)
 
-*server install process
+#Server Install Process
+### `npm install`
 ### `npm run dev`
 
-*how to use the APIs
+#How to use the APIs
+-get
+-put/patch
+-post
+-delete
+
