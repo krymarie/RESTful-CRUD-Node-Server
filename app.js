@@ -64,8 +64,8 @@ app.use((error, req, res, next) => {
 // const express = require('express');
 // app.use(express.static(path.join(__dirname, 'public')));
 mongoose
-  .connect(
-    "mongodb+srv://maximilian:9u4biljMQc4jjqbe@cluster0-ntrwp.mongodb.net/messages?retryWrites=true"
+    .connect(
+    "mongodb+srv://krymitchel:8fs3fj6j9u4bi@cluster0-ntrwp.mongodb.net/messages?retryWrites=true"
   )
   .then(result => {
     app.listen(8080);
